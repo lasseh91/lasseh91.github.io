@@ -323,22 +323,42 @@
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
+  // Custom ikon helper
+  function emojiIcon(emoji) {
+    return L.divIcon({
+      html: `<div style="
+        font-size: 30px;
+        line-height: 1;
+      ">${emoji}</div>`,
+      className: '',
+      iconSize: [30, 30],
+      iconAnchor: [15, 30],
+      popupAnchor: [0, -30]
+    });
+  }   
+
   // Markør: Vor Frue Kirke
-  L.marker([56.1586, 10.2005])
+  L.marker([56.15813136007106, 10.204803241684486],
+    { icon: emojiIcon('⛪') }
+  )
     .addTo(map)
     .bindPopup(
-      '<b>Kirke</b><br>Vor Frue Kirke'
+      '<b>Vor Frue Kirke</b><br>Frue Kirkeplads 3, 8000 Aarhus'
     );
 
   // Markør: Parkering
-  L.marker([56.1694, 10.2132])
+  L.marker([56.158767315695606, 10.215419015233866],
+    { icon: emojiIcon('🅿️') }
+  )
     .addTo(map)
     .bindPopup(
-      '<b>Parkering</b><br>Navitas Parkeringskælder'
+      '<b>Navitas Parkeringskælder</b><br>Inge Lehmanns Gade 10, 8000 Aarhus'
     );
 
   // Markør: Reception
-  L.marker([56.1548, 10.2148])
+  L.marker([56.15588852818413, 10.219505353328222],
+    { icon: emojiIcon('🥂') }
+  )
     .addTo(map)
     .bindPopup(
       '<b>Reception</b><br>Honnørkajen'
