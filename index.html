@@ -137,39 +137,7 @@
       }
     }
   </style>
-</head>
-<script>
-
-  // Initialiser kort
-  const map = L.map('map').setView([56.1572, 10.2039], 14);
-
-  // OpenStreetMap tiles
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
-
-  // Markør: Vor Frue Kirke
-  L.marker([56.1586, 10.2005])
-    .addTo(map)
-    .bindPopup(
-      '<b>Kirke</b><br>Vor Frue Kirke'
-    );
-
-  // Markør: Parkering
-  L.marker([56.1694, 10.2132])
-    .addTo(map)
-    .bindPopup(
-      '<b>Parkering</b><br>Navitas Parkeringskælder'
-    );
-
-  // Markør: Reception
-  L.marker([56.1548, 10.2148])
-    .addTo(map)
-    .bindPopup(
-      '<b>Reception</b><br>Honnørkajen'
-    );
-
-</script>  
+</head> 
 <body>
 
   <main class="page">
@@ -345,5 +313,37 @@
 
   </main>
 
+ <script>
+
+  // Initialiser kort
+  const map = L.map('map').setView([56.1572, 10.2039], 14);
+
+  // OpenStreetMap tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Markør: Vor Frue Kirke
+  L.marker([56.1586, 10.2005])
+    .addTo(map)
+    .bindPopup(
+      '<b>Kirke</b><br>Vor Frue Kirke'
+    );
+
+  // Markør: Parkering
+  L.marker([56.1694, 10.2132])
+    .addTo(map)
+    .bindPopup(
+      '<b>Parkering</b><br>Navitas Parkeringskælder'
+    );
+
+  // Markør: Reception
+  L.marker([56.1548, 10.2148])
+    .addTo(map)
+    .bindPopup(
+      '<b>Reception</b><br>Honnørkajen'
+    );
+
+</script>  
 </body>
 </html>
