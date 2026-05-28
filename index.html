@@ -384,6 +384,62 @@ function emojiIcon(emoji) {
       '<b>Reception</b><br>Honnørkajen'
     );
 
+
+  // Markør: Atlantic
+  L.marker([56.152781388415846, 10.212127626341726],
+    { icon: emojiIcon('🛏️') }
+  )
+.addTo(map)
+.bindPopup(
+  `
+    <b>Hotel Atlantic</b><br>
+    <a href="https://maps.app.goo.gl/DPyvhGvCtorkoadP9" target="_blank">
+      Europaplads 10, 8000 Aarhus
+    </a>
+  `
+);   
+
+   // Markør: Cabinn
+  L.marker([56.15593533029058, 10.210461584013053],
+    { icon: emojiIcon('🛏️') }
+  )
+.addTo(map)
+.bindPopup(
+  `
+    <b>Cabinn</b><br>
+    <a href="https://maps.app.goo.gl/eHJUZsibumjzhceH8" target="_blank">
+      Kannikegade 14, 8000 Aarhus
+    </a>
+  `
+);
+
+   // Markør: Wakeup
+  L.marker([56.14867576635895, 10.203620784012614],
+    { icon: emojiIcon('🛏️') }
+  )
+.addTo(map)
+.bindPopup(
+  `
+    <b>Wakeup</b><br>
+    <a href="https://maps.app.goo.gl/vNz2QyHzLdCNyxtE6" target="_blank">
+      M. P. Bruuns Gade 27, 8000 Aarhus
+    </a>
+  `
+);
+
+   // Markør: Danhostel
+  L.marker([56.156179360295525, 10.207487827822414],
+    { icon: emojiIcon('🛏️') }
+  )
+.addTo(map)
+.bindPopup(
+  `
+    <b>Danhostel Aarhus City</b><br>
+    <a href="https://maps.app.goo.gl/xn7pwkpMuAERMwuB7" target="_blank">
+      8000 c, Fiskergade 10, 8000 Aarhus
+    </a>
+  `
+);     
 </script>  
 </body>
 </html>
