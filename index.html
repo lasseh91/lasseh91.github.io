@@ -356,10 +356,15 @@ function emojiIcon(emoji) {
   L.marker([56.15813136007106, 10.204803241684486],
     { icon: emojiIcon('💒') }
   )
-    .addTo(map)
-    .bindPopup(
-      '<b>Vor Frue Kirke</b><br>Frue Kirkeplads 3, 8000 Aarhus'
-    );
+.addTo(map)
+.bindPopup(
+  `
+    <b>Vor Frue Kirke</b><br>
+    <a href="https://maps.app.goo.gl/wtQjMN3CKkxs9tTY8" target="_blank">
+      Frue Kirkeplads 3, 8000 Aarhus
+    </a>
+  `
+);  
 
   // Markør: Parkering
   L.marker([56.158767315695606, 10.215419015233866],
