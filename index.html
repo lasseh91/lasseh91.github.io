@@ -108,7 +108,6 @@
       width: 100%;
       border-radius: 18px;
       overflow: hidden;
-      filter: grayscale(15%) sepia(8%);
     }
     
     .leaflet-popup-content-wrapper {
@@ -320,9 +319,12 @@
   const map = L.map('map').setView([56.1553308476735, 10.209566652581977], 14);
 
   // OpenStreetMap tiles
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+L.tileLayer(
+  'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',
+  {
+    attribution: '&copy; Stadia Maps &copy; OpenMapTiles &copy; OpenStreetMap contributors'
+  }
+).addTo(map);   
 
   // Custom ikon helper
 function emojiIcon(emoji) {
