@@ -317,7 +317,7 @@
  <script>
 
   // Initialiser kort
-  const map = L.map('map').setView([56.1572, 10.2039], 14);
+  const map = L.map('map').setView([56.1553308476735, 10.209566652581977], 14);
 
   // OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -376,13 +376,28 @@ function emojiIcon(emoji) {
 );   
 
   // Markør: Reception
-  L.marker([56.15588852818413, 10.219505353328222],
+  L.marker([56.15580682413896, 10.219671813396848],
     { icon: emojiIcon('🥂') }
   )
     .addTo(map)
     .bindPopup(
       '<b>Reception</b><br>Honnørkajen'
     );
+
+  // Markør: Bryllupsfest
+  L.marker([56.15442053434676, 10.220176068670582],
+    { icon: emojiIcon('🕺💃') }
+  )
+
+.addTo(map)
+.bindPopup(
+  `
+    <b>Bryllupsfest</b><br>
+    <a href="https://maps.app.goo.gl/AffGnFmaBbWpNueB8" target="_blank">
+      Balticagade 12D, 8000 Aarhus
+    </a>
+  `
+);     
 
 
   // Markør: Atlantic
