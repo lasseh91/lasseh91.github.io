@@ -407,6 +407,20 @@ function emojiIcon(emoji) {
   `
 );     
 
+  // Markør: Morgenmad
+  L.marker([56.15178099751012, 10.213177782591078],
+    { icon: emojiIcon('🥐') }
+  )
+
+.addTo(map)
+.bindPopup(
+  `
+    <b>Morgenmad</b><br>
+    <a href="https://maps.app.goo.gl/oFXvmMJshRZ2DmMr9" target="_blank">
+      Havnevej 8, 8000 Aarhus
+    </a>
+  `
+);     
 
   // Markør: Atlantic
   L.marker([56.152781388415846, 10.212127626341726],
