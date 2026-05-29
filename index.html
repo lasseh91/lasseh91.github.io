@@ -120,6 +120,55 @@
       line-height: 1.4;
     }
 
+    .timeline {
+      position: relative;
+      max-width: 520px;
+      margin: 0 auto;
+      padding-left: 40px;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #1e1c19;
+    }
+    
+    .timeline-item {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 54px;
+    }
+    
+    .timeline-dot {
+      position: absolute;
+      left: -40px;
+      width: 26px;
+      height: 26px;
+      background: #1e1c19;
+      border-radius: 50%;
+    }
+    
+    .timeline-content {
+      text-align: left;
+    }
+    
+    .timeline-time {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    
+    .timeline-text {
+      font-size: 1.6rem;
+      line-height: 1.25;
+    }    
+
     @media (max-width: 600px) {      
       .section {
         padding: 0 26px 72px;
@@ -136,6 +185,33 @@
         line-height: 1.5;
       }
     }
+
+      .timeline {
+        padding-left: 34px;
+      }
+    
+      .timeline::before {
+        left: 10px;
+      }
+    
+      .timeline-dot {
+        left: -34px;
+        width: 22px;
+        height: 22px;
+      }
+    
+      .timeline-item {
+        margin-bottom: 46px;
+      }
+    
+      .timeline-time {
+        font-size: 1.8rem;
+      }
+    
+      .timeline-text {
+        font-size: 1.45rem;
+      }
+    }    
   </style>
 </head> 
 <body>
@@ -184,13 +260,91 @@
 
     <!-- PROGRAM -->
     <section id="program" class="section">
+    
       <h1 class="section-title">Program</h1>
-
-      <div class="section-text">
-        <p>
-          Brødtext
-        </p>
+    
+      <div class="timeline">
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-time">12.00</div>
+            <div class="timeline-text">Vielse i Vor Frue Kirke</div>
+          </div>
+        </div>
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-time">13.00</div>
+            <div class="timeline-text">Fælles gåtur til Honnørkajen</div>
+          </div>
+        </div>
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-time">13.30</div>
+            <div class="timeline-text">
+              Reception, mad, musik og spil på Honnørkajen
+            </div>
+          </div>
+        </div>
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-time">15.00</div>
+            <div class="timeline-text">Fællesfoto</div>
+          </div>
+        </div>
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-time">17.00</div>
+            <div class="timeline-text">
+              Bryllupsmiddag på Balticagade 12D
+            </div>
+          </div>
+        </div>
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-time">23.00</div>
+            <div class="timeline-text">
+              Brudevals, fest, dans og drinks
+            </div>
+          </div>
+        </div>
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-time">02.00</div>
+            <div class="timeline-text">Natmad</div>
+          </div>
+        </div>
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-time">03.00</div>
+            <div class="timeline-text">Tak for idag</div>
+          </div>
+        </div>
+    
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-time">09.00</div>
+            <div class="timeline-text">Morgenmad på Havnevej 8</div>
+          </div>
+        </div>
+    
       </div>
+    
     </section>
 
     <div class="divider"></div>
