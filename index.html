@@ -277,7 +277,7 @@
     
       <div class="section-text">
         <p>
-          Her kan du finde lokationer for kirke, parkering og reception.
+          Her kan du finde lokationer for kirke, parkering, reception, bryllupsfest, morgenmad og mulig overnatning.
         </p>
       </div>
     
@@ -552,13 +552,18 @@ function emojiIcon(emoji) {
 );   
 
   // Markør: Reception
-  L.marker([56.15580682413896, 10.219671813396848],
+  L.marker([56.155954445474265, 10.219533316297147],
     { icon: emojiIcon('🥂') }
   )
-    .addTo(map)
-    .bindPopup(
-      '<b>Reception</b><br>Honnørkajen'
-    );
+.addTo(map)
+.bindPopup(
+  `
+    <b>Reception</b><br>
+    <a href="https://maps.app.goo.gl/1nvUMrDkXfaQ9AFY7" target="_blank">
+      Honnørkajen
+    </a>
+  `
+);   
 
   // Markør: Bryllupsfest
   L.marker([56.15442053434676, 10.220176068670582],
