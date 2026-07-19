@@ -176,7 +176,73 @@
     .next-day {
         margin-top: 40px;
       }    
+
+    .image-carousel {
+      position: relative;
+      width: 100%;
+      margin-top: 35px;
+    }
     
+    .image-gallery {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .image-gallery::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .image-gallery img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: contain;
+      scroll-snap-align: center;
+      border-radius: 12px;
+      display: block;
+    }
+    
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    
+      width: 38px;
+      height: 38px;
+    
+      border: none;
+      border-radius: 50%;
+    
+      background: rgba(236, 230, 219, 0.9);
+      color: #1e1c19;
+    
+      font-family: Arial, sans-serif;
+      font-size: 32px;
+      line-height: 30px;
+    
+      cursor: pointer;
+    
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .carousel-button-left {
+      left: 8px;
+    }
+    
+    .carousel-button-right {
+      right: 8px;
+    }
+    
+    .carousel-button:active {
+      transform: translateY(-50%) scale(0.95);
+    }    
 
     @media (max-width: 600px) {      
       .section {
@@ -445,13 +511,42 @@
     
     <!-- DRESSCODE -->
     <section id="dresscode" class="section">
-      <h1 class="section-title">Dresscode</h1>
+      <h1 class="section-title">Dresscode Inspiration</h1>
 
       <div class="section-text">
         <p>
           Brødtext
         </p>
       </div>
+
+      <div class="image-carousel">
+    
+        <button class="carousel-button carousel-button-left" onclick="scrollGallery(-1)">
+          ‹
+        </button>
+    
+        <div class="image-gallery" id="imageGallery">
+    
+          <img src="insp1.png" alt="Dresscode inspiration 1">
+          <img src="insp2.png" alt="Dresscode inspiration 2">
+          <img src="insp3.png" alt="Dresscode inspiration 3">
+          <img src="insp4.png" alt="Dresscode inspiration 4">
+          <img src="insp5.png" alt="Dresscode inspiration 5">
+          <img src="insp6.png" alt="Dresscode inspiration 6">
+          <img src="insp7.png" alt="Dresscode inspiration 7">
+          <img src="insp8.png" alt="Dresscode inspiration 8">
+          <img src="insp9.png" alt="Dresscode inspiration 9">
+          <img src="insp10.png" alt="Dresscode inspiration 10">
+          <img src="insp11.png" alt="Dresscode inspiration 11">
+    
+        </div>
+    
+        <button class="carousel-button carousel-button-right" onclick="scrollGallery(1)">
+          ›
+        </button>
+    
+      </div>
+      
     </section>
     
     <div class="divider"></div>
@@ -661,6 +756,20 @@ function emojiIcon(emoji) {
     </a>
   `
 );     
-</script>  
+</script>
+
+<script>
+  function scrollGallery(direction) {
+    const gallery = document.getElementById('imageGallery');
+
+    const imageWidth = gallery.clientWidth;
+
+    gallery.scrollBy({
+      left: direction * imageWidth,
+      behavior: 'smooth'
+    });
+  }
+</script>
+  
 </body>
 </html>
